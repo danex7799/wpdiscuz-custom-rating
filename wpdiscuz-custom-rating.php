@@ -44,7 +44,7 @@ function modify_wpdiscuz_rating($output, $tag)
 	preg_match('/\((\d) \/ (\d)\)/', $output, $matches);
 	$rating = $matches[1];
 	$votes = $matches[2];
-	$replaceString = "$rating/5 stars · $votes votes";
+	$replaceString = "$rating/5 stars · $votes votes"; // Change this to modify th text above the stars
 	$result = preg_replace('/Rate This Post: \(\d \/ \d\)/', $replaceString, $output);
 	$result = str_replace('<div class="wpdiscuz-stars-wrapper">', '<a href="#wc-comment-header"><div class="wpdiscuz-stars-wrapper">', $result);
 	$result = str_replace('</div></div></div>', '</div></div></div></a>', $result);
